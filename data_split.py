@@ -1,3 +1,17 @@
+#
+#   This module performs the function of splitting the training data into
+#   two datasets, for testing out the system on the second dataset (test *)
+#
+
+#
+#   Usage: import data_split as split
+#           test_size = 0.2
+#           split.split_data(test_size)
+#
+#   Returns: A list of four datasets. X_train, y_train, X_test, y_test in this
+#           order.
+#
+
 import numpy as np
 import constants as c
 from sklearn.cross_validation import train_test_split as tts
