@@ -8,8 +8,8 @@ TRAIN_MASKS_NPY = 'imgs_mask_train.npy'
 MASK_SUFFIX = '_mask.tif'
 
 # Global variables
-DATA_PATH = 'data/raw/'
-NPY_PATH = 'data/npy/'
+DATA_PATH = '../data/raw/'
+NPY_PATH = '../data/npy/'
 
 TRAIN_DATA_PATH = os.path.join(DATA_PATH, 'train')
 TEST_DATA_PATH = os.path.join(DATA_PATH, 'test')
