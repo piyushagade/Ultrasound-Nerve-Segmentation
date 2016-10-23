@@ -1,8 +1,11 @@
-#
-#   This global module contains all system constants like filenames, image sizes, paths.
-#   Example usage: import constants as c
-#                   print (c.IMAGE_SIZE[0])
-#
+'''
+
+   This global module contains all system constants like filenames, image sizes, paths.
+
+   Example usage: import constants as c
+                   print (c.IMAGE_SIZE[0])
+
+'''
 
 import os
 
@@ -23,3 +26,4 @@ TEST_DATA_PATH = os.path.join(DATA_PATH, 'test')
 
 # Data Image Size
 IMAGE_SIZE = [420, 580]
+RESIZE_FACTOR  = [0.25, 0.25]

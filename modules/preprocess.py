@@ -1,12 +1,10 @@
-#
-#   This module reads the contents (the ultrasound images and masks), converts them
-#   into numpy arrays and persists them in npy files for later use.
-#
+'''
+   This module reads the contents (the ultrasound images and masks), downsizes them, converts them
+   into numpy arrays and persists them in npy files for later use.
 
-#
-#   Functions to be called: preprocess_data()
-#   Returns: doesn't return any object
-#
+   Functions to be called: preprocess_data()
+   Returns: doesn't return any object
+'''
 
 from __future__ import print_function
 import os
@@ -16,6 +14,8 @@ import constants as c
 from sys import stdout
 from time import sleep
 
+def downsize_image(img):
+	return cv2.resize(img, (int(img.shape[1] * c.RESIZE_FACTOR[0]), int(img.shape[0] * c.RESIZE_FACTOR[1])))
 
 def create_npy(array, filename):
     np.save(c.NPY_PATH + filename, array)
@@ -23,7 +23,7 @@ def create_npy(array, filename):
 
 
 def read_image(data_path, image_name):
-    return np.array([cv2.imread(os.path.join(data_path, image_name), cv2.IMREAD_GRAYSCALE)])
+    return np.array(downsize_image([cv2.imread(os.path.join(data_path, image_name), cv2.IMREAD_GRAYSCALE)]))
 
 
 def preprocess_training_data():
