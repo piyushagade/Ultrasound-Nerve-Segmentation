@@ -59,3 +59,10 @@ Images can be better segmented and construction of a model
 with greater accuracy will be possible. The only downside of
 convolutional neural networks is that it requires huge training
 data and large training time.
+
+Group members
+---
+1) Disha Doshi
+2) Sadaf Ghaffari
+3) Ghananeel Rotithor
+4) Piyush Agade
