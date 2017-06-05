@@ -14,7 +14,7 @@
 
 import numpy as np
 import constants as c
-from sklearn.cross_validation import train_test_split as tts
+# from sklearn.cross_validation import train_test_split as tts
 
 # Load training data (images and their masks)
 def load_train_data():
@@ -22,7 +22,20 @@ def load_train_data():
     imgs_mask_train = np.load(c.NPY_PATH + c.TRAIN_MASKS_NPY)
     return [imgs_train, imgs_mask_train]
 
+
+def load_validation_data():
+    imgs_validation = np.load(c.NPY_PATH + c.VALIDATION_NPY)
+    imgs_mask_validation = np.load(c.NPY_PATH + c.VALIDATION_MASKS_NPY)
+    return [imgs_validation, imgs_mask_validation]
+
+
+def load_test_data():
+    imgs_test = np.load(c.NPY_PATH + c.TEST_NPY)
+    imgs_id_test = np.load(c.NPY_PATH + c.TEST_IDS_NPY)
+    return [imgs_test, imgs_id_test]
+
 # Split training data
 def split_data(fraction):
-    imgs_train, imgs_mask_train = load_train_data()
-    return tts(imgs_train, imgs_mask_train, test_size = fraction, random_state = 0)
+    # imgs_train, imgs_mask_train = load_train_data()
+    # return tts(imgs_train, imgs_mask_train, test_size = fraction, random_state = 0)
+    pass
